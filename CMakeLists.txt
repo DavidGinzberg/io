@@ -39,7 +39,9 @@ IF(CMAKE_COMPILER_IS_GNUCC OR (CMAKE_C_COMPILER_ID MATCHES "Clang"))
 	SET(CMAKE_BUILD_TYPE_DebugFast)
 	SET(CMAKE_CXX_FLAGS_DEBUGFAST "-g -O0")
 	SET(CMAKE_C_FLAGS_DEBUGFAST "-g -O0")
-	SET(CMAKE_C_FLAGS "-msse2")
+	#Removing temporarily for RapbPi build
+	#TODO: detect architeture and skip or replace this flag on ARM
+	#SET(CMAKE_C_FLAGS "-msse2")
 	if(NOT CMAKE_BUILD_TYPE)
 	        SET(CMAKE_BUILD_TYPE "DebugFast")
 	endif(NOT CMAKE_BUILD_TYPE)
